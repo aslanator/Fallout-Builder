@@ -1,8 +1,9 @@
 import Controller from "../../Controller";
+import {Response, Request} from '../../../../node_modules/@types/express-serve-static-core/index'
 
 export default class UserController extends Controller {
 
-    public index() {
-        return 'userIndex11323';
+    public index(req: Request<any>, res: Response<any>) {
+        res.send('userIndex');
     }
 }
